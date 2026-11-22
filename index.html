@@ -118,6 +118,10 @@ section{padding:clamp(72px,11vw,144px) var(--pad)}
 .citation figcaption{margin-top:18px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
 .citation cite{font-style:normal}
 
+/* Deux colonnes alternées */
+.deux-col{display:grid;grid-template-columns:1fr;gap:clamp(40px,6vw,96px);align-items:start}
+.deux-col .citation{margin-bottom:0}
+
 /* En-tête */
 .entete{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px var(--pad);background:rgba(23,19,15,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08)}
 /* Signature Académie Céfran (logo blanc) */
@@ -210,6 +214,7 @@ section{padding:clamp(72px,11vw,144px) var(--pad)}
   .colonnes{grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,56px);border-top:0}
   .colonne{border-top:2px solid #fff;border-bottom:0}
   #fondateur .wrap{grid-template-columns:minmax(240px,420px) 1fr}
+  .deux-col{grid-template-columns:1fr 1fr}
 }
 @media (min-width:1024px){
 }
@@ -241,14 +246,16 @@ section{padding:clamp(72px,11vw,144px) var(--pad)}
 </section>
 
 <section id="probleme" aria-labelledby="t-probleme" class="sur-clair">
-  <div class="wrap">
-    <h2 class="masque" id="t-probleme">Le problème</h2>
+  <div class="wrap deux-col">
     <figure class="citation">
       <blockquote><p>C'est nous la chanson française</p></blockquote>
       <figcaption>Youssoupha, <cite>Chanson française</cite></figcaption>
     </figure>
-    <p class="texte">Les institutions regardent les quartiers populaires comme des territoires à équiper culturellement. On y fait de la médiation, on amène les gosses au musée, on leur apprend à aimer les « œuvres capitales de l'humanité ». Pendant ce temps, ce sont les Cross Cultural Kids, nés de la culture hybride des quartiers français, qui représentent la culture française dans le monde. Pour nous, ces quartiers sont des territoires de production, pas des territoires à équiper.</p>
-    <a class="lien-fleche" href="/manifeste">Lire le manifeste</a>
+    <div>
+      <h2 class="masque" id="t-probleme">Le problème</h2>
+      <p class="texte">Les institutions regardent les quartiers populaires comme des territoires à équiper culturellement. On y fait de la médiation, on amène les gosses au musée, on leur apprend à aimer les « œuvres capitales de l'humanité ». Pendant ce temps, ce sont les Cross Cultural Kids, nés de la culture hybride des quartiers français, qui représentent la culture française dans le monde. Pour nous, ces quartiers sont des territoires de production, pas des territoires à équiper.</p>
+      <a class="lien-fleche" href="/manifeste">Lire le manifeste</a>
+    </div>
   </div>
 </section>
 
@@ -329,13 +336,15 @@ section{padding:clamp(72px,11vw,144px) var(--pad)}
 </section>
 
 <section id="appel">
-  <div class="wrap">
+  <div class="wrap deux-col">
+    <div>
+      <h2>Nous sommes ce qui se fait de mieux dans la France de 2026.</h2>
+      <a class="btn" href="mailto:contact@academie-cefran.fr">Contact</a>
+    </div>
     <figure class="citation">
       <blockquote><p>Il est grand temps qu'ça déménage, il n'y a jamais de tendance irrémédiable</p></blockquote>
       <figcaption>Youssoupha, <cite>Menaces de mort</cite></figcaption>
     </figure>
-    <h2>Nous sommes ce qui se fait de mieux dans la France de 2026.</h2>
-    <a class="btn" href="mailto:contact@academie-cefran.fr">Contact</a>
   </div>
 </section>
 
